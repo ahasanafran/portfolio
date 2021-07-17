@@ -1,0 +1,754 @@
+/*== Common Css ==*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+body {
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+.row{
+    max-width: 1140px;
+}
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.p-100 {
+    padding: 80px 0 80px 0;
+}
+
+.bg {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.bg:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: 0.8;
+    left: 0;
+    top: 0;
+}
+
+/*== Section Title ==*/
+.section-title {
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.section-title h2 span {
+    color: orange;
+}
+
+.section-title::after {
+    position: absolute;
+    content: '';
+    background: orange;
+    height: 3px;
+    width: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*== Header ==*/
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    padding: 20px 0;
+    position: absolute;
+    transition: .5s;
+}
+
+.sticky {
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    padding: 10px 0;
+    z-index: 99;
+    position: fixed;
+    border-bottom: 1px solid orange;
+}
+
+.sticky .logo img {
+    max-width: 80px !important;
+}
+
+.sticky ul li {
+    padding-top: 5px !important;
+}
+
+.sticky ul li a {
+    font-size: 16px !important;
+}
+
+.header .logo {
+    float: left;
+}
+
+.header .logo img {
+    max-width: 100px;
+}
+
+.menu {
+    float: right;
+
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li {
+    margin-right: 15px;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+}
+
+.menu ul li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: all linear .3s;
+}
+
+.menu ul li a::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 20px;
+    left: 0;
+    top: 0;
+    background: orange;
+    opacity: 0;
+    transition: all linear .3s;
+}
+
+.menu ul li a::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 50px;
+    left: 0;
+    bottom: -40px;
+    background: orange;
+    opacity: 0;
+    transition: all linear .3s;
+}
+
+.menu ul li a:hover::after {
+    opacity: 1;
+    top: 30px;
+}
+
+.menu ul li a:hover::before {
+    opacity: 1;
+    bottom: -5px;
+}
+
+.menu ul li a:hover {
+    color: orange;
+}
+
+.menu ul li.current a {
+    color: orange;
+}
+.sticky  .menu ul li.current a{
+    color: orange !important;
+}
+/*== Mobile Menu ==*/
+
+.mobile-menu {
+    color: orange;
+    font-size: 20px;;
+    cursor: pointer;
+    transition: all linear .5s;
+    border: 1px solid ;
+    border-radius: 5px;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.overlay {
+    width: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
+    transition: all linear .5s;
+    z-index: 999;
+}
+
+.close-nav {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    font-weight:900;
+    right: 15%;
+    text-decoration: none;
+    top: 15px;
+}
+
+.close-nav:hover {
+    color: orange;
+    text-decoration: none;
+}
+
+.overlay-nav {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.overlay-nav a {
+    display: block;
+    font-size: 1.563rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: all linear .3s;
+}
+
+.overlay-nav a:hover {
+    color: orange;
+    border-bottom: 1px solid orange;
+    font-size: 1.75rem;
+}
+/*== Slider ==*/
+#home {
+    position: relative;
+    width: 100%;
+}
+
+.banner-content {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.banner-content h4 {
+    font-size: 30px;
+}
+
+.banner-content h2 {
+    font-size: 50px;
+    color: orange;
+}
+
+.banner-content h3 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.banner-content span {
+    color: orange !important;
+}
+
+.banner-content a {
+    color: orange;
+    text-transform: capitalize;
+    font-size: 24px;
+    border: 1px solid orange;
+    border-radius: 2px;
+    padding: 8px 20px;
+    transition: all linear .3s;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.banner-content a:hover {
+    color: #333;
+    box-shadow: inset 150px 0 0 orange;
+}
+
+#home .owl-stage-outer,
+#home .owl-stage,
+#home .owl-item {
+    height: 100%;
+}
+
+#home .owl-dots {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+
+}
+
+#home .owl-dots button {
+    background: orange;
+    height: 20px;
+    width: 20px;
+    margin: 10px 0;
+    border-radius: 50%;
+    display: block;
+}
+
+#home .owl-dots button.active {
+    background-color: #fff;
+}
+
+/*== About Us ==*/
+.about-img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.about-img img {
+    width: 90%;
+    border: 10px solid #fff;
+    z-index: 2;
+}
+
+.about-img::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 90%;
+    left: 5px;
+    top: 20px;
+    z-index: -1;
+    border: 7px solid orange;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-text h4 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about-text h4 span {
+    color: orange;
+}
+
+.about-text p {
+    font-size: 24px;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 35px;
+}
+
+/*== Skills ==*/
+.skill-head h3 {
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.single-tech h4 span {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.skill-head span {
+    color: orange;
+}
+
+.single-tech h4 {
+    margin-bottom: 15px;
+}
+
+.single-tech {
+    text-transform: capitalize;
+    padding: 15px 30px;
+}
+
+.single-pro h4 {
+    margin: 10px 0;
+}
+
+/*== Services ==*/
+.single-service {
+    display: flex;
+    margin: 30px 0;
+}
+
+.single-service i {
+    font-size: 50px;
+    font-weight: 700;
+    height: 150px;
+    width: 150px;
+    line-height: 150px;
+    color: orange;
+    border: 1px solid orange;
+    text-align: center;
+    transition: all linear .5s;
+}
+
+.service-text {
+    padding: 20px;
+    text-transform: capitalize;
+    transition: all linear .4s;
+}
+
+.service-text h3 {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.service-text p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.single-service:hover i {
+    font-size: 70px;
+    transform: rotate(360deg);
+}
+
+.single-service:hover .service-text {
+    box-shadow: inset 500px 0 0 orange;
+}
+
+/*== Counter Up ==*/
+#counter {
+    padding: 100px 0;
+}
+
+.single-counter i {
+    font-size: 20px;
+    color: #333;
+    background: #fff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    transition: .5s;
+}
+
+.single-counter:hover i {
+    font-size: 30px;
+    transform: rotate(360deg);
+}
+
+.single-counter h4 {
+    margin: 0;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+
+.single-counter span {
+    display: block;
+    font-size: 50px;
+    padding: 20px 0;
+    color: orange;
+}
+
+/*== Projects ==*/
+.project-menu {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.project-menu li {
+    text-transform: capitalize;
+    margin: 0 10px;
+    border: 1px solid orange;
+    padding: 5px 10px;
+    font-weight: 500;
+}
+
+.project-menu li.active {
+    background: orange;
+}
+
+.single-project {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.single-project img {
+    width: 100%;
+    height: 280px;
+}
+
+.project-content {
+    position: absolute;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 20px 30px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    transition: all linear .4s;
+    z-index: 2;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.project-content::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #333;
+    top: 0;
+    left: 0;
+    opacity: .9;
+    z-index: -1;
+}
+
+.project-content a i {
+    color: orange;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border: 1px solid orange;
+    border-radius: 50%;
+}
+
+.project-content h5 {
+    margin: 20px 0;
+    font-size: 26px;
+}
+
+.single-project:hover .project-content {
+    transform: scaleY(1);
+}
+
+/*== Testimonials ==*/
+.testimonial {
+    position: relative;
+}
+
+.single-testimonial {
+    background: #333;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0px 50px 10px #adadad;
+    overflow: inherit;
+}
+
+.single-testimonial img {
+    max-width: 100px;
+    border-radius: 50%;
+    padding: 8px;
+    margin: 0 auto;
+    border: 3px dotted;
+    margin-bottom: 10px;
+}
+
+.single-testimonial .star {
+    color: orange;
+}
+
+.single-testimonial h4 {
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.single-testimonial span {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.owl-item.active.center .single-testimonial {
+    background-color: orange;
+    color: #000;
+}
+
+.owl-item.active.center .single-testimonial img {
+    border: 3px dotted #000;
+}
+
+.owl-item.active.center .single-testimonial .star {
+    color: #fff;
+}
+
+/*== Contact ==*/
+.contact{
+    display: flex;
+}
+.contact-form input,
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+.contact-form input:last-child {
+    margin-bottom: 0;
+    background: orange;
+    color: #000;
+    font-size: 24px;
+    transition: .5s;
+    font-weight: 600;
+}
+
+.contact-form input:last-child:hover {
+    box-shadow: inset 800px 0 0 0 #333;
+    color: #fff;
+}
+
+.contact-mid {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.contact-mid i {
+    font-size: 18px;
+    background: #000;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+.contact-mid p {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.contact-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-link img {
+    max-width: 200px;
+    margin-bottom: 40px;
+}
+
+.contact-link h3 {
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.contact-link a i {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    background: orange;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: .4s;
+}
+
+.contact-link a:hover i {
+    background: #000;
+    color: orange;
+    transform: rotate(360deg);
+}
+
+/*== Scroll Top ==*/
+.scroll-top i {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    color: #fff;
+    background: orange;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    z-index: 99;
+    transition: .3s;
+}
+
+.scroll-top i:hover {
+    background: #333;
+    color: #fff;
+    transform: rotate(360deg);
+}
+
+/*== Footer ==*/
+#footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#footer p {
+    margin: 0;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+#footer p span {
+    color: orange;
+}
